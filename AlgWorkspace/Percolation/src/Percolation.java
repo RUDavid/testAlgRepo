@@ -1,0 +1,50 @@
+//TODO: IMport WQU
+
+public class Percolation {
+	boolean[][] grid;
+	int N;
+
+	public Percolation(int N) // create N-by-N grid, with all sites blocked
+	{
+		this.N = N; // set grid size
+		// Initialize grid, false -
+		grid = new boolean[N][N];
+		for (int i = 0; i <= N; ++i) {
+			for (int j = 0; j <= N; ++j)
+				grid[i][j] = false;
+		}
+	}
+
+	public void open(int i, int j) // open site (row i, column j) if it is not
+									// open already
+	{
+		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
+		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
+		grid[i][j] = true;
+	}
+
+	public boolean isOpen(int i, int j) // is site (row i, column j) open?
+	{
+		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
+		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
+		return grid[i][j];
+	}
+
+	public boolean isFull(int i, int j) // is site (row i, column j) full?
+	{
+		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
+		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
+		//TODO: add checking of full, by WeightedQuickUnionUF
+		return false;
+	}
+
+	public boolean percolates() // does the system percolate?
+	{
+		return false;
+	}
+
+	public static void main(String[] args) // test client (optional)
+	{
+		System.out.println("Percolation, main");
+	}
+}

@@ -41,7 +41,7 @@ public class Percolation {
 		{
 			if(mGrid[1][k]) // if cell is open 
 			{
-				if(wquUF.connected( arrayIndex(1,k), arrayIndex(i,j)) )
+				if(wquUF.connected( getArrayIndex(1,k), getArrayIndex(i,j)) )
 				{
 					return true;
 				}
@@ -61,7 +61,7 @@ public class Percolation {
 				{
 					if(mGrid[N][j]) // if cell is open 
 					{
-						if(wquUF.connected( arrayIndex(0,i), arrayIndex(N,j)) )
+						if(wquUF.connected( getArrayIndex(0,i), getArrayIndex(N,j)) )
 						{
 							return true;
 						}
@@ -72,7 +72,7 @@ public class Percolation {
 		return false;
 	}
 
-	private int arrayIndex(int i, int j ) { return N*(i-1)+j;}
+	private int getArrayIndex(int i, int j ) { return N*(i-1)+j;}
 	
 	public static void main(String[] args) // test client (optional)
 	{

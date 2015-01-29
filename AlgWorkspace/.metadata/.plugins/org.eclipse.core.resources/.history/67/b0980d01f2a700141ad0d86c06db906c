@@ -1,0 +1,79 @@
+//TODO: IMport WQU
+//test comment
+
+import edu.princeton.cs.algs4.WeightedQuickUnionUF;
+
+public class Percolation {
+	boolean[][] mGrid;
+	int N;
+	WeightedQuickUnionUF wquUF;
+
+	public Percolation(int N) // create N-by-N grid, with all sites blocked
+	{
+		this.N = N; // set grid size
+		// Initialize grid, false -
+		mGrid = new boolean[N][N];
+		for (int i = 0; i <= N; ++i) {
+			for (int j = 0; j <= N; ++j)
+				grid[i][j] = false;
+		}
+		wquUF = new WeightedQuickUnionUF(N*N);
+		// [i,j] maps to: (i-1)N + j
+	}
+
+	public void open(int i, int j) // open site (row i, column j) if it is not
+									// open already
+	{
+		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
+		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
+		mGrid[i][j] = true;
+	}
+
+	public boolean isOpen(int i, int j) // is site (row i, column j) open?
+	{
+		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
+		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
+		return mGrid[i][j];
+	}
+
+	public boolean isFull(int i, int j) // is site (row i, column j) full?
+	{
+		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
+		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
+		for(int k = 1; k <= N; ++k) // check first row(top cells)
+		{
+			if(mGrid[1][k]) // if cell is open 
+			{
+				if(wquUF.connected( arrayIndex(1,k), arrayIndex(i,j)) )
+				{
+					return true;
+				}
+			}
+		}
+		// return false if (i,j) is not connected to the any of open cell on top
+		return false;
+	}
+
+	public boolean percolates() // does the system percolate?
+	{
+		for(int k = 1; k <= N; ++k) //  first row(top cells)
+		{
+			for(int k = 1; k <= N; ++k) // last row(bottom cells)
+			if(mGrid[1][k]) // if cell is open 
+			{
+				if(wquUF.connected( arrayIndex(1,k), arrayIndex(i,j)) )
+				{
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
+	private int arrayIndex(int i, int j ) { return N*(i-1)+j;}
+	
+	public static void main(String[] args) // test client (optional)
+	{
+		System.out.println("Percolation, main");
+	}
+}

@@ -1,5 +1,3 @@
-import edu.princeton.cs.introcs.StdDraw;
-import edu.princeton.cs.introcs.StdOut;
 
 /****************************************************************************
  *  Compilation:  javac InteractivePercolationVisualizer.java

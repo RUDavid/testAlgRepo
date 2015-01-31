@@ -18,9 +18,6 @@
 
 import java.awt.Font;
 
-import edu.princeton.cs.introcs.In;
-import edu.princeton.cs.introcs.StdDraw;
-
 public class PercolationVisualizer {
 
     // delay in miliseconds (controls animation speed)
@@ -30,8 +27,8 @@ public class PercolationVisualizer {
     public static void draw(Percolation perc, int N) {
         StdDraw.clear();
         StdDraw.setPenColor(StdDraw.BLACK);
-        StdDraw.setXscale(0, N);
-        StdDraw.setYscale(0, N);
+        StdDraw.setXscale(-.05*N, 1.05*N);
+        StdDraw.setYscale(-.05*N, 1.05*N);   // leave a border to write text
         StdDraw.filledSquare(N/2.0, N/2.0, N/2.0);
 
         // draw N-by-N grid

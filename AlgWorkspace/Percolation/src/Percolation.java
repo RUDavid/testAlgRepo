@@ -1,6 +1,3 @@
-import edu.princeton.cs.algs4.WeightedQuickUnionUF;
-import edu.princeton.cs.introcs.StdOut;
-import edu.princeton.cs.introcs.StdRandom;
 
 public class Percolation {
 	boolean[][] mGrid;

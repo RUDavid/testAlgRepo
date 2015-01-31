@@ -24,6 +24,17 @@ public class Percolation {
 		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
 		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
 		mGrid[i][j] = true;
+		int dRow[] = {-1, 0, +1, 0};
+        int dCol[] = {0, -1, 0, +1};
+        for(int k = 0; k < 4; k++) {
+            int nextRow = i + dRow[k];
+            int nextCol = j + dCol[k];
+            // check the index correctnes, and is given site open? then connect them
+            if(nextRow >= 1 && nextCol >= 1 && nextRow <= N  && nextCol <= N && mGrid[nextRow][nextCol]){
+            	wquUF.union( getArrayIndex(i,j), getArrayIndex(nextRow,nextCol));
+            	
+            }
+        }
 	}
 
 	public boolean isOpen(int i, int j) // is site (row i, column j) open?

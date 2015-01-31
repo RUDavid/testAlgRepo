@@ -1,4 +1,6 @@
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
+import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.introcs.StdRandom;
 
 public class Percolation {
 	boolean[][] mGrid;
@@ -9,13 +11,13 @@ public class Percolation {
 	{
 		this.N = N; // set grid size
 		// Initialize grid, false -
-		mGrid = new boolean[N][N];
-		for (int i = 0; i <= N; ++i) {
-			for (int j = 0; j <= N; ++j)
+		mGrid = new boolean[N+1][N+1];
+		for (int i = 1; i <= N; ++i) {
+			for (int j = 1; j <= N; ++j)
 				mGrid[i][j] = false;
 		}
 		wquUF = new WeightedQuickUnionUF(N*N);
-		// [i,j] maps to: (i-1)N + j
+		// [i,j] maps to: (i-1)N + j - 1		
 	}
 
 	public void open(int i, int j) // open site (row i, column j) if it is not
@@ -66,13 +68,13 @@ public class Percolation {
 	{
 		for(int i = 1; i <= N; ++i) //  first row(top cells)
 		{
-			if(mGrid[0][i]) // if cell is open
+			if(mGrid[1][i]) // if cell is open
 			{
 				for(int j = 1; j <= N; ++j) // last row(bottom cells)
 				{
 					if(mGrid[N][j]) // if cell is open 
 					{
-						if(wquUF.connected( getArrayIndex(0,i), getArrayIndex(N,j)) )
+						if(wquUF.connected( getArrayIndex(1,i), getArrayIndex(N,j)) )
 						{
 							return true;
 						}
@@ -83,10 +85,48 @@ public class Percolation {
 		return false;
 	}
 
-	private int getArrayIndex(int i, int j ) { return N*(i-1)+j;}
+	private int getArrayIndex(int i, int j ) { return N*(i-1)+j - 1;}
 	
 	public static void main(String[] args) // test client (optional)
 	{
+		int N = 200;
+		Percolation p = new Percolation(N);
+		//////Start
+		int openedSites = 0;	     
+	    int [] gridPositions = new int[N*N];
+	    int closedPositions = N*N;
+	     
+	     // Fill the array with index values
+	     for (int i=0; i<N*N; i++)
+	       gridPositions[i] = i;
+
+	     while (!p.percolates() )
+	     {      
+	    	 if( 0 == closedPositions)
+	    	 {
+	    		 break; 
+	    		 //TODO: throw exception 
+	    	 }
+	    		 
+	        // 1  Generate a random value from 0 to sizeof the array -1 and use the value at that index position.
+	        int randPos = StdRandom.uniform(closedPositions);
+	        int i = 1 + gridPositions[randPos] % N;
+	        int j = 1 + (gridPositions[randPos] - i + 1) / N;
+	        
+	        // 2. Reduce the array size by 1.
+	        closedPositions--;
+	        
+	        // 3. Take the value from the end of the array and move it into the position you've just used. 
+	        gridPositions[randPos] = gridPositions[closedPositions];
+	        
+	      
+	        p.open(i, j);
+	        openedSites++;
+
+	        StdOut.printf("rE: %1d %1d was opened %b percolates %b closedPositions %1d openedSites %1d\n", 
+	                        i, j, p.isOpen(i, j), p.percolates(), closedPositions, openedSites);
+	     }
+		//////End
 		System.out.println("Percolation, main");
 	}
 }

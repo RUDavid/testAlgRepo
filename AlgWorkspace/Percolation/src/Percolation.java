@@ -89,7 +89,7 @@ public class Percolation {
 	
 	public static void main(String[] args) // test client (optional)
 	{
-		int N = 200;
+		int N = 20;
 		Percolation p = new Percolation(N);
 		//////Start
 		int openedSites = 0;	     

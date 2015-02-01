@@ -46,8 +46,8 @@ public class PercolationStats {
 		        p.open(i, j);
 		        openedSites++;
 
-		        StdOut.printf("rE: attemted# %1d  %1d %1d was opened %b percolates %b closedPositions %1d openedSites %1d\n", 
-		                        count,i, j, p.isOpen(i, j), p.percolates(), closedPositions, openedSites);
+		        //StdOut.printf("rE: attemted# %1d  %1d %1d was opened %b percolates %b closedPositions %1d openedSites %1d\n", 
+		                        //count,i, j, p.isOpen(i, j), p.percolates(), closedPositions, openedSites);
 		     }
 		     //store resutls
 		     results[count]  = openedSites;

@@ -1,23 +1,23 @@
 
 public class Percolation {
-	
-	private boolean[][] mGrid;
-	private int N;
-	private WeightedQuickUnionUF wquUF;
 
-	public Percolation(int N) // create N-by-N grid, with all sites blocked
-	{
-		if ( N <= 0 ) throw new IllegalArgumentException("Wrong argument");
-		this.N = N; // set grid size
-		// Initialize grid, false -
-		mGrid = new boolean[N+1][N+1];
-		for (int i = 1; i <= N; ++i) {
-			for (int j = 1; j <= N; ++j)
-				mGrid[i][j] = false;
-		}
-		wquUF = new WeightedQuickUnionUF(N*N);
-		// [i,j] maps to: (i-1)N + j - 1		
+private boolean[][] mGrid;
+private int N;
+private WeightedQuickUnionUF wquUF;
+
+public Percolation(int N){ // create N-by-N grid, with all sites blocked
+
+	if ( N <= 0 ) throw new IllegalArgumentException("Wrong argument");
+	this.N = N; // set grid size
+	// Initialize grid, false -
+	mGrid = new boolean[N+1][N+1];
+	for (int i = 1; i <= N; ++i) {
+		for (int j = 1; j <= N; ++j)
+			mGrid[i][j] = false;
 	}
+	wquUF = new WeightedQuickUnionUF(N*N);
+	// [i,j] maps to: (i-1)N + j - 1		
+}
 
 	public void open(int i, int j) // open site (row i, column j) if it is not
 									// open already
@@ -25,8 +25,8 @@ public class Percolation {
 		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
 		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
 		mGrid[i][j] = true;
-		int dRow[] = {-1, 0, +1, 0};
-        int dCol[] = {0, -1, 0, +1};
+		int [] dRow = { -1, 0, +1, 0 };
+        int [] dCol = { 0, -1, 0, +1 };
         for(int k = 0; k < 4; k++) {
             int nextRow = i + dRow[k];
             int nextCol = j + dCol[k];

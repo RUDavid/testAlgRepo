@@ -69,7 +69,7 @@ public class PercolationStats {
 	   double val = 0;
 	   double percThreshold = this.mean();
 	   for (int count = 0; count < this.T; ++count)
-		   val += Math.pow((results[count] -percThreshold), 2);
+		   val += (results[count] -percThreshold)*(results[count] -percThreshold);
 	   val = val/(this.T-1);
 	   val = Math.sqrt(val);
 	   return val;

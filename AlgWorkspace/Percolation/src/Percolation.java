@@ -1,11 +1,13 @@
 
 public class Percolation {
-	boolean[][] mGrid;
-	int N;
-	WeightedQuickUnionUF wquUF;
+	
+	private boolean[][] mGrid;
+	private int N;
+	private WeightedQuickUnionUF wquUF;
 
 	public Percolation(int N) // create N-by-N grid, with all sites blocked
 	{
+		if ( N <= 0 ) throw new IllegalArgumentException("Wrong argument");
 		this.N = N; // set grid size
 		// Initialize grid, false -
 		mGrid = new boolean[N+1][N+1];

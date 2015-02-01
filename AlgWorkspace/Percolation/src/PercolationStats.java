@@ -1,15 +1,15 @@
 
 public class PercolationStats {
-    private int []results;
+    private double []results;
     private int N;
     private int T;
-    
+
     public PercolationStats(int N, int T)     // perform T independent experiments on an N-by-N grid
     {
         if ( N <= 0 || T <= 0) throw new IllegalArgumentException("Wrong argument");
         this.N = N;
         this.T = T;
-        results = new int[T];
+        results = new double[T];
         for (int count = 0; count < T; count++)
         {
             Percolation p = new Percolation(N);
@@ -49,7 +49,7 @@ public class PercolationStats {
                 //count,i, j, p.isOpen(i, j), p.percolates(), closedPositions, openedSites);
             }
             //store resutls
-            results[count]  = openedSites;
+            results[count]  = openedSites / N;
 
 
         }
@@ -99,6 +99,9 @@ public class PercolationStats {
         double stdDev = ps.stddev();
         double hi = ps.confidenceHi();
         double lo = ps.confidenceLo();
-
+        StdOut.printf("mean                        =%1f ", mean);
+        StdOut.printf("stddev                      =%1f ", stdDev);
+        StdOut.printf("95percent confidence interval     =%1f, %1f", hi,lo);
+        
     }
 }

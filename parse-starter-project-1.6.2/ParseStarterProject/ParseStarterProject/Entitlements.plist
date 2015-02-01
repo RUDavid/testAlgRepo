@@ -2,20 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>FacebookAppID</key>
-	<string>412734068893271</string>
 	<key>get-task-allow</key>
 	<true/>
-	<key>FacebookDisplayName</key>
-	<string>MiniInst</string>
-	<key> URL types</key>
-	<array>
-		<dict>
-			<key>URL Schemes</key>
-			<array>
-				<string>fb412734068893271</string>
-			</array>
-		</dict>
-	</array>
 </dict>
 </plist>

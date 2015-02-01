@@ -47,13 +47,13 @@ public class Percolation {
 
     public boolean isFull( int i, int j ) // is site (row i, column j) full?
     {
-        if ( i <= 0 || i > N ) throw new IndexOutOfBoundsException("row index i out of bounds");
-        if ( j <= 0 || j > N ) throw new IndexOutOfBoundsException("column index j out of bounds");
+        if (i <= 0 || i > N ) throw new IndexOutOfBoundsException("row index i out of bounds");
+        if (j <= 0 || j > N ) throw new IndexOutOfBoundsException("column index j out of bounds");
         for (int k = 1; k <= N; ++k) // check first row(top cells)
         {
             if ( mGrid[1][k] ) // if cell is open 
             {
-                if (wquUF.connected( getArrayIndex( 1, k ), getArrayIndex( i, j )) )
+                if (wquUF.connected( getArrayIndex( 1, k ), getArrayIndex( i, j )))
                 {
                     return true;
                 }
@@ -99,7 +99,7 @@ public class Percolation {
         for (int i = 0; i < N * N; i++)
             gridPositions[i] = i;
 
-        while (!p.percolates() )
+        while (!p.percolates())
         {      
             // 1  Generate a random value from 0 to sizeof the array -1 and use the value at that index position.
             int randPos = StdRandom.uniform(closedPositions);

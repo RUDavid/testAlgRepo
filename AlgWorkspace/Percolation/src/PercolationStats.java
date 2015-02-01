@@ -10,7 +10,7 @@ public class PercolationStats {
         this.N = N;
         this.T = T;
         results = new int[T];
-        for(int count = 0; count < T; count++)
+        for (int count = 0; count < T; count++)
         {
             Percolation p = new Percolation(N);
             //////Start
@@ -19,12 +19,12 @@ public class PercolationStats {
             int closedPositions = N*N;
 
             // Fill the array with index values
-            for (int i=0; i<N*N; i++)
+            for (int i = 0; i < N*N; i++)
                 gridPositions[i] = i;
 
-            while (!p.percolates() )
+            while (!p.percolates())
             {      
-                if( 0 == closedPositions)
+                if (0 == closedPositions)
                 {
                     break; 
                     //TODO: throw exception 
@@ -58,7 +58,7 @@ public class PercolationStats {
     {
         double val = 0;
         for (int count = 0; count < T; ++count)
-            val +=results[count];
+            val += results[count];
         val = val/T; //for debugging
         return val;
     }
@@ -94,7 +94,7 @@ public class PercolationStats {
         int N = Integer.parseInt(args[0]);
         int T = Integer.parseInt(args[1]);
 
-        PercolationStats ps = new PercolationStats(N,T);
+        PercolationStats ps = new PercolationStats(N, T);
         double mean = ps.mean();
         double stdDev = ps.stddev();
         double hi = ps.confidenceHi();

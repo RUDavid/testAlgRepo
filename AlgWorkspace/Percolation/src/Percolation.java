@@ -27,12 +27,12 @@ public Percolation(int N){ // create N-by-N grid, with all sites blocked
 		mGrid[i][j] = true;
 		int [] dRow = { -1, 0, +1, 0 };
         int [] dCol = { 0, -1, 0, +1 };
-        for(int k = 0; k < 4; k++) {
+        for (int k = 0; k < 4; k++) {
             int nextRow = i + dRow[k];
             int nextCol = j + dCol[k];
             // check the index correctnes, and is given site open? then connect them
-            if(nextRow >= 1 && nextCol >= 1 && nextRow <= N  && nextCol <= N && mGrid[nextRow][nextCol]){
-            	wquUF.union( getArrayIndex(i,j), getArrayIndex(nextRow,nextCol));
+            if (nextRow >= 1 && nextCol >= 1 && nextRow <= N  && nextCol <= N && mGrid[nextRow][nextCol]){ 
+            	wquUF.union( getArrayIndex( i, j), getArrayIndex( nextRow, nextCol));
             	
             }
         }
@@ -45,15 +45,15 @@ public Percolation(int N){ // create N-by-N grid, with all sites blocked
 		return mGrid[i][j];
 	}
 
-	public boolean isFull(int i, int j) // is site (row i, column j) full?
+	public boolean isFull( int i, int j ) // is site (row i, column j) full?
 	{
-		if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
-		if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
-		for(int k = 1; k <= N; ++k) // check first row(top cells)
+		if ( i <= 0 || i > N ) throw new IndexOutOfBoundsException("row index i out of bounds");
+		if ( j <= 0 || j > N ) throw new IndexOutOfBoundsException("column index j out of bounds");
+		for (int k = 1; k <= N; ++k) // check first row(top cells)
 		{
-			if(mGrid[1][k]) // if cell is open 
+			if ( mGrid[1][k] ) // if cell is open 
 			{
-				if(wquUF.connected( getArrayIndex(1,k), getArrayIndex(i,j)) )
+				if (wquUF.connected( getArrayIndex( 1, k ), getArrayIndex( i, j )) )
 				{
 					return true;
 				}
@@ -65,15 +65,15 @@ public Percolation(int N){ // create N-by-N grid, with all sites blocked
 
 	public boolean percolates() // does the system percolate?
 	{
-		for(int i = 1; i <= N; ++i) //  first row(top cells)
+		for (int i = 1; i <= N; ++i) //  first row(top cells)
 		{
-			if(mGrid[1][i]) // if cell is open
+			if (mGrid[1][i]) // if cell is open
 			{
-				for(int j = 1; j <= N; ++j) // last row(bottom cells)
+				for (int j = 1; j <= N; ++j) // last row(bottom cells)
 				{
-					if(mGrid[N][j]) // if cell is open 
+					if (mGrid[N][j]) // if cell is open 
 					{
-						if(wquUF.connected( getArrayIndex(1,i), getArrayIndex(N,j)) )
+						if (wquUF.connected( getArrayIndex( 1, i), getArrayIndex( N, j)) )
 						{
 							return true;
 						}
@@ -84,29 +84,23 @@ public Percolation(int N){ // create N-by-N grid, with all sites blocked
 		return false;
 	}
 
-	private int getArrayIndex(int i, int j ) { return N*(i-1)+j - 1;}
+	private int getArrayIndex(int i, int j ) { return N * ( i - 1 ) + j - 1; } 
 	
 	public static void main(String[] args) // test client (optional)
-	{
+    {
 		int N = 20;
-		Percolation p = new Percolation(N);
+		Percolation p = new Percolation ( N );
 		//////Start
 		int openedSites = 0;	     
-	    int [] gridPositions = new int[N*N];
+	    int [] gridPositions = new int[N * N];
 	    int closedPositions = N*N;
 	     
 	     // Fill the array with index values
-	     for (int i=0; i<N*N; i++)
+	     for (int i = 0; i < N * N; i++)
 	       gridPositions[i] = i;
 
 	     while (!p.percolates() )
 	     {      
-	    	 if( 0 == closedPositions)
-	    	 {
-	    		 break; 
-	    		 //TODO: throw exception 
-	    	 }
-	    		 
 	        // 1  Generate a random value from 0 to sizeof the array -1 and use the value at that index position.
 	        int randPos = StdRandom.uniform(closedPositions);
 	        int i = 1 + gridPositions[randPos] % N;

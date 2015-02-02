@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ParseUI/PFQueryTableViewController.h>
 
-@interface FeedViewController : UITableViewController
+
+@interface FeedViewController :  PFQueryTableViewController
 
 @end

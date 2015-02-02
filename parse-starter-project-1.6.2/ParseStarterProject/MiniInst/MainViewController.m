@@ -9,7 +9,11 @@
 #import "MainViewController.h"
 #import <Parse/PFFile.h>
 #import <Parse/PFObject.h>
+#import <Parse/PFUser.h>
 #import "FeedViewController.h"
+#import "Constats.h"
+
+
 
 @interface MainViewController ()
 
@@ -61,15 +65,15 @@
 {
     [self dismissModalViewControllerAnimated:YES];
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage]; // Image to be stored
-
+     NSData *imageData = UIImagePNGRepresentation(image);
+     PFFile *photoFile = [PFFile fileWithData:imageData];
     
-    NSData *imageData = UIImagePNGRepresentation(image);
-    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    // Create a Photo object
+    PFObject *photo = [PFObject objectWithClassName:kPAPPhotoClassKey];
+    [photo setObject:[PFUser currentUser] forKey:kPAPPhotoUserKey];
+    [photo setObject:photoFile forKey:kPAPPhotoPictureKey];
     
-    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
-    userPhoto[@"imageName"] = image.description;
-    userPhoto[@"imageFile"] = imageFile;
-    [userPhoto saveInBackground];
+    [photo saveInBackground];
 }
 
 

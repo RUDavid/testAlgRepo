@@ -7,6 +7,7 @@
 //
 
 #import "FeedViewController.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface FeedViewController ()
 
@@ -43,15 +44,26 @@
     return 0;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *MyIdentifier = @"MyIdentifier";
     
-    // Configure the cell...
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:MyIdentifier];
     
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                       reuseIdentifier:MyIdentifier];
+    }
+    
+    // Here we use the new provided setImageWithURL: method to load the web image
+    [cell.imageView setImageWithURL:[NSURL URLWithString:@"http://www.domain.com/path/to/image.jpg"]
+                   placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    
+    cell.textLabel.text = @"My Text";
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -8,6 +8,7 @@
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "UserDetailsViewController.h"
 
 @implementation ParseStarterProjectViewController
 
@@ -21,6 +22,18 @@
     PFObject *testObject = [PFObject objectWithClassName:@"DAVObject"];
     testObject[@"foo11"] = @"bar22";
     [testObject saveInBackground];
+}
+
+#pragma mark -
+#pragma mark UIViewController
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    // Check if user is cached and linked to Facebook, if so, bypass login
+    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        [self _presentUserDetailsViewControllerAnimated:NO];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,7 +72,7 @@
             } else {
                 NSLog(@"User with facebook logged in!");
             }
-           // [self _presentUserDetailsViewControllerAnimated:YES];
+            [self _presentUserDetailsViewControllerAnimated:YES];
         }
     }];
     
@@ -69,6 +82,14 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark -
+#pragma mark UserDetailsViewController
+
+- (void)_presentUserDetailsViewControllerAnimated:(BOOL)animated {
+    UserDetailsViewController *detailsViewController=[[UserDetailsViewController alloc] initWithNibName:@"UserDetailsViewController" bundle:nil];
+    [self.navigationController pushViewController:detailsViewController animated:animated];
 }
 
 

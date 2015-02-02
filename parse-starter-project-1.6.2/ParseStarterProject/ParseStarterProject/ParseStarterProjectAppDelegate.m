@@ -42,6 +42,9 @@
      [PFFacebookUtils initializeFacebook];
     // ****************************************************************************
 
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ParseStarterProjectViewController alloc] init]];
+//    [self.window makeKeyAndVisible];
+    
     [PFUser enableAutomaticUser];
 
     PFACL *defaultACL = [PFACL ACL];
@@ -53,8 +56,12 @@
 
     // Override point for customization after application launch.
 
-    self.window.rootViewController = self.viewController;
+    UINavigationController *navigation = [[UINavigationController alloc]initWithRootViewController:self.viewController];
+    self.window.rootViewController = navigation;
     [self.window makeKeyAndVisible];
+    
+    //self.window.rootViewController = self.viewController;
+    //[self.window makeKeyAndVisible];
 
     if (application.applicationState != UIApplicationStateBackground) {
         // Track an app open here if we launch with a push, unless

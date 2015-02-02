@@ -2,7 +2,7 @@
 //  PAPPhotoCell.h
 //  Anypic
 //
-//  Created by Héctor Ramos on 5/3/12.
+//  Created by David on 2/2/15.
 //  Copyright (c) 2013 Parse. All rights reserved.
 //
 

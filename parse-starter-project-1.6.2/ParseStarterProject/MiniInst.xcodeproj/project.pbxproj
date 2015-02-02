@@ -25,6 +25,7 @@
 		2FCDD6B014A573F500295AAC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCDD6AF14A573F500295AAC /* QuartzCore.framework */; };
 		4998650515BF305000803E05 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4998650415BF305000803E05 /* StoreKit.framework */; };
 		632BAC8E1A7EBA0F00597B8E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 632BAC8D1A7EBA0F00597B8E /* FacebookSDK.framework */; };
+		63742E121A8000DD0068D0F0 /* PAPPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 63742E111A8000DD0068D0F0 /* PAPPhotoCell.m */; };
 		743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 743D7B6C157DA60100084B67 /* CoreGraphics.framework */; };
 		811B095C1A09503D008B3393 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 811B095B1A09503D008B3393 /* ParseUI.framework */; };
 		817AD67C196B009E0014C796 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 817AD67B196B009E0014C796 /* Bolts.framework */; };
@@ -72,6 +73,8 @@
 		6372FF521613CC3C002132AF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		6372FF551613CC42002132AF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		6372FF571613CC47002132AF /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		63742E101A8000DD0068D0F0 /* PAPPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPPhotoCell.h; sourceTree = "<group>"; };
+		63742E111A8000DD0068D0F0 /* PAPPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPPhotoCell.m; sourceTree = "<group>"; };
 		743D7B6C157DA60100084B67 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		811B095B1A09503D008B3393 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		817AD67B196B009E0014C796 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		09ABC07713A1D52D009C3FCF /* MiniInst */ = {
 			isa = PBXGroup;
 			children = (
+				63742E0F1A8000CB0068D0F0 /* TableViewCell */,
 				C357F7861A7F990000586007 /* Constants */,
 				09ABC08013A1D52D009C3FCF /* MiniInstAppDelegate.h */,
 				09ABC08113A1D52D009C3FCF /* MiniInstAppDelegate.m */,
@@ -193,6 +197,15 @@
 				09ABC07E13A1D52D009C3FCF /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63742E0F1A8000CB0068D0F0 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				63742E101A8000DD0068D0F0 /* PAPPhotoCell.h */,
+				63742E111A8000DD0068D0F0 /* PAPPhotoCell.m */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 		81A6CA5E1A2EA0B800297C39 /* System Frameworks */ = {
@@ -314,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63742E121A8000DD0068D0F0 /* PAPPhotoCell.m in Sources */,
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* MiniInstAppDelegate.m in Sources */,
 				C357F7781A7F546000586007 /* FeedViewController.m in Sources */,

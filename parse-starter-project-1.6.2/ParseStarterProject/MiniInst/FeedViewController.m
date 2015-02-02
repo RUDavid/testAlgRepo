@@ -1,18 +1,18 @@
 //
-//  UserDetailsViewController.m
+//  FeedViewController.m
 //  MiniInst
 //
 //  Created by David on 2/2/15.
 //
 //
 
-#import "UserDetailsViewController.h"
+#import "FeedViewController.h"
 
-@interface UserDetailsViewController ()
+@interface FeedViewController ()
 
 @end
 
-@implementation UserDetailsViewController
+@implementation FeedViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

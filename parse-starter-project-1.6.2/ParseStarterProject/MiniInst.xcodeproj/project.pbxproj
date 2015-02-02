@@ -33,8 +33,8 @@
 		81DDFD1919B4A60300BE649C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDFD1719B4A60300BE649C /* Parse.framework */; };
 		81DDFD1A19B4A60300BE649C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DDFD1819B4A60300BE649C /* ParseFacebookUtils.framework */; };
 		91D261791A36EB67005D713D /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91D261781A36EB67005D713D /* libsqlite3.0.dylib */; };
-		C357F7781A7F546000586007 /* UserDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C357F7761A7F546000586007 /* UserDetailsViewController.m */; };
-		C357F7791A7F546000586007 /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C357F7771A7F546000586007 /* UserDetailsViewController.xib */; };
+		C357F7781A7F546000586007 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C357F7761A7F546000586007 /* FeedViewController.m */; };
+		C357F7791A7F546000586007 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C357F7771A7F546000586007 /* FeedViewController.xib */; };
 		C357F77E1A7F763900586007 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C357F77C1A7F763900586007 /* MainViewController.m */; };
 		C357F77F1A7F763900586007 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C357F77D1A7F763900586007 /* MainViewController.xib */; };
 		C357F7851A7F833D00586007 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C357F7841A7F833D00586007 /* SDWebImage.framework */; };
@@ -81,9 +81,9 @@
 		81DDFD1819B4A60300BE649C /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		91D261781A36EB67005D713D /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		97E18B1E1624CB5700B17A67 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C357F7751A7F546000586007 /* UserDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsViewController.h; sourceTree = "<group>"; };
-		C357F7761A7F546000586007 /* UserDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsViewController.m; sourceTree = "<group>"; };
-		C357F7771A7F546000586007 /* UserDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserDetailsViewController.xib; sourceTree = "<group>"; };
+		C357F7751A7F546000586007 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		C357F7761A7F546000586007 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		C357F7771A7F546000586007 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		C357F77B1A7F763900586007 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C357F77C1A7F763900586007 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C357F77D1A7F763900586007 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
@@ -170,9 +170,9 @@
 				C357F77B1A7F763900586007 /* MainViewController.h */,
 				C357F77C1A7F763900586007 /* MainViewController.m */,
 				C357F77D1A7F763900586007 /* MainViewController.xib */,
-				C357F7751A7F546000586007 /* UserDetailsViewController.h */,
-				C357F7761A7F546000586007 /* UserDetailsViewController.m */,
-				C357F7771A7F546000586007 /* UserDetailsViewController.xib */,
+				C357F7751A7F546000586007 /* FeedViewController.h */,
+				C357F7761A7F546000586007 /* FeedViewController.m */,
+				C357F7771A7F546000586007 /* FeedViewController.xib */,
 				09ABC07813A1D52D009C3FCF /* Supporting Files */,
 			);
 			path = MiniInst;
@@ -270,7 +270,7 @@
 			files = (
 				09ABC07C13A1D52D009C3FCF /* InfoPlist.strings in Resources */,
 				09ABC08513A1D52E009C3FCF /* MainWindow.xib in Resources */,
-				C357F7791A7F546000586007 /* UserDetailsViewController.xib in Resources */,
+				C357F7791A7F546000586007 /* FeedViewController.xib in Resources */,
 				09ABC08B13A1D52E009C3FCF /* MiniInstViewController.xib in Resources */,
 				C357F77F1A7F763900586007 /* MainViewController.xib in Resources */,
 				09144A7313C2997E00388B00 /* Entitlements.plist in Resources */,
@@ -306,7 +306,7 @@
 			files = (
 				09ABC07F13A1D52D009C3FCF /* main.m in Sources */,
 				09ABC08213A1D52D009C3FCF /* MiniInstAppDelegate.m in Sources */,
-				C357F7781A7F546000586007 /* UserDetailsViewController.m in Sources */,
+				C357F7781A7F546000586007 /* FeedViewController.m in Sources */,
 				C357F77E1A7F763900586007 /* MainViewController.m in Sources */,
 				09ABC08813A1D52E009C3FCF /* MiniInstViewController.m in Sources */,
 			);

@@ -32,7 +32,7 @@
     
     // Check if user is cached and linked to Facebook, if so, bypass login
     if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
-        [self _presentUserDetailsViewControllerAnimated:NO];
+        [self _presentMainViewControllerAnimated:NO];
     }
 }
 
@@ -72,7 +72,7 @@
             } else {
                 NSLog(@"User with facebook logged in!");
             }
-            [self _presentUserDetailsViewControllerAnimated:YES];
+            [self _presentMainViewControllerAnimated:YES];
         }
     }];
     
@@ -85,9 +85,9 @@
 }
 
 #pragma mark -
-#pragma mark UserDetailsViewController
+#pragma mark FeedViewController
 
-- (void)_presentUserDetailsViewControllerAnimated:(BOOL)animated {
+- (void)_presentMainViewControllerAnimated:(BOOL)animated {
     MainViewController *mainViewController=[[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
     [self.navigationController pushViewController:mainViewController animated:animated];
 }

@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import <Parse/PFFile.h>
 #import <Parse/PFObject.h>
+#import "FeedViewController.h"
 
 @interface MainViewController ()
 
@@ -73,6 +74,8 @@
 
 
 - (IBAction)goToFeedScreen:(id)sender {
+    FeedViewController *feedViewController=[[FeedViewController alloc] initWithNibName:@"FeedViewController" bundle:nil];
+    [self.navigationController pushViewController:feedViewController animated:YES];
 }
 
 /*

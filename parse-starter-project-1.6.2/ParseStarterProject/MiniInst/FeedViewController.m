@@ -183,7 +183,6 @@
             //[cell.photoButton addTarget:self action:@selector(didTapOnPhotoAction:) forControlEvents:UIControlEventTouchUpInside];
         }
         
-        cell.photoButton.tag = index;
         cell.imageView.image = [UIImage imageNamed:@"PlaceholderPhoto.png"];
         
         if (object) {

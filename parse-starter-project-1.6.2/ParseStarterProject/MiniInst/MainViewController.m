@@ -65,7 +65,7 @@
 {
     [self dismissModalViewControllerAnimated:YES];
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage]; // Image to be stored
-     NSData *imageData = UIImagePNGRepresentation(image);
+    NSData *imageData = UIImageJPEGRepresentation(image, 0.1); //UIImagePNGRepresentation(image);
      PFFile *photoFile = [PFFile fileWithData:imageData];
     
     // Create a Photo object

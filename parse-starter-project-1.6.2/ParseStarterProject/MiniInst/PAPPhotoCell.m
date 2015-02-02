@@ -9,7 +9,6 @@
 #import "PAPPhotoCell.h"
 
 @implementation PAPPhotoCell
-@synthesize photoButton;
 
 #pragma mark - NSObject
 
@@ -29,11 +28,6 @@
         self.imageView.backgroundColor = [UIColor blackColor];
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
         
-        self.photoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.photoButton.frame = CGRectMake( 0.0f, 0.0f, self.bounds.size.width, self.bounds.size.width);
-        self.photoButton.backgroundColor = [UIColor clearColor];
-        [self.contentView addSubview:self.photoButton];
-        
         [self.contentView bringSubviewToFront:self.imageView];
     }
 
@@ -46,7 +40,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.imageView.frame = CGRectMake( 0.0f, 0.0f, self.bounds.size.width, self.bounds.size.width);
-    self.photoButton.frame = CGRectMake( 0.0f, 0.0f, self.bounds.size.width, self.bounds.size.width);
+    //self.photoButton.frame = CGRectMake( 0.0f, 0.0f, self.bounds.size.width, self.bounds.size.width);
 }
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "MainViewController.h"
+#import <Parse/PFFile.h>
+#import <Parse/PFObject.h>
 
 @interface MainViewController ()
 
@@ -57,8 +59,16 @@
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [self dismissModalViewControllerAnimated:YES];
-    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage];
+    UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage]; // Image to be stored
+
     
+    NSData *imageData = UIImagePNGRepresentation(image);
+    PFFile *imageFile = [PFFile fileWithName:@"image.png" data:imageData];
+    
+    PFObject *userPhoto = [PFObject objectWithClassName:@"UserPhoto"];
+    userPhoto[@"imageName"] = image.description;
+    userPhoto[@"imageFile"] = imageFile;
+    [userPhoto saveInBackground];
 }
 
 

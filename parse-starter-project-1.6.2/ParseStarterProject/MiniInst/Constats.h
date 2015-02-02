@@ -11,12 +11,12 @@
 
 #pragma mark - Photo Class
 // Class key
-NSString *const kPAPPhotoClassKey = @"Photo";
+#define kPAPPhotoClassKey @"Photo"
 
 // Field keys
-NSString *const kPAPPhotoPictureKey         = @"image";
-NSString *const kPAPPhotoThumbnailKey       = @"thumbnail";
-NSString *const kPAPPhotoUserKey            = @"user";
-NSString *const kPAPPhotoOpenGraphIDKey    = @"fbOpenGraphID";
+#define kPAPPhotoPictureKey        @"image"
+#define kPAPPhotoThumbnailKey      @"thumbnail"
+#define kPAPPhotoUserKey           @"user"
+#define kPAPPhotoOpenGraphIDKey    @"fbOpenGraphID"
 
 #endif

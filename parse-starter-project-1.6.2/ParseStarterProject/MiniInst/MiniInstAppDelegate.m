@@ -42,11 +42,7 @@
      [PFFacebookUtils initializeFacebook];
     // ****************************************************************************
 
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MiniInstViewController alloc] init]];
-//    [self.window makeKeyAndVisible];
-    
     [PFUser enableAutomaticUser];
-
     PFACL *defaultACL = [PFACL ACL];
 
     // If you would like all objects to be private by default, remove this line.
@@ -55,13 +51,9 @@
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
 
     // Override point for customization after application launch.
-
     UINavigationController *navigation = [[UINavigationController alloc]initWithRootViewController:self.viewController];
     self.window.rootViewController = navigation;
     [self.window makeKeyAndVisible];
-    
-    //self.window.rootViewController = self.viewController;
-    //[self.window makeKeyAndVisible];
 
     if (application.applicationState != UIApplicationStateBackground) {
         // Track an app open here if we launch with a push, unless

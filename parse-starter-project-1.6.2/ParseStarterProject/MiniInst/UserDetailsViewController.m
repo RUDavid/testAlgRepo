@@ -16,10 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Load table header view from nib
-    //[[NSBundle mainBundle] loadNibNamed:@"TableHeaderView" owner:self options:nil];
-    //self.tableView.tableHeaderView = self.headerView;
+    [self.navigationItem setHidesBackButton:YES];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

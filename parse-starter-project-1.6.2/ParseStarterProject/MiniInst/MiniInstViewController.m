@@ -8,7 +8,7 @@
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
-#import "UserDetailsViewController.h"
+#import "MainViewController.h"
 
 @implementation MiniInstViewController
 
@@ -88,8 +88,8 @@
 #pragma mark UserDetailsViewController
 
 - (void)_presentUserDetailsViewControllerAnimated:(BOOL)animated {
-    UserDetailsViewController *detailsViewController=[[UserDetailsViewController alloc] initWithNibName:@"UserDetailsViewController" bundle:nil];
-    [self.navigationController pushViewController:detailsViewController animated:animated];
+    MainViewController *mainViewController=[[MainViewController alloc] initWithNibName:@"MainViewController" bundle:nil];
+    [self.navigationController pushViewController:mainViewController animated:animated];
 }
 
 

@@ -37,6 +37,7 @@
 		C357F7791A7F546000586007 /* UserDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C357F7771A7F546000586007 /* UserDetailsViewController.xib */; };
 		C357F77E1A7F763900586007 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C357F77C1A7F763900586007 /* MainViewController.m */; };
 		C357F77F1A7F763900586007 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C357F77D1A7F763900586007 /* MainViewController.xib */; };
+		C357F7851A7F833D00586007 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C357F7841A7F833D00586007 /* SDWebImage.framework */; };
 		C4C51B571613CE0800959FDC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B541613CE0800959FDC /* Default.png */; };
 		C4C51B581613CE0800959FDC /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B551613CE0800959FDC /* Default-568h@2x.png */; };
 		C4C51B591613CE0800959FDC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C51B561613CE0800959FDC /* Default@2x.png */; };
@@ -86,6 +87,7 @@
 		C357F77B1A7F763900586007 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		C357F77C1A7F763900586007 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		C357F77D1A7F763900586007 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		C357F7841A7F833D00586007 /* SDWebImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = "<group>"; };
 		C4C51B541613CE0800959FDC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C4C51B551613CE0800959FDC /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C4C51B561613CE0800959FDC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				632BAC8E1A7EBA0F00597B8E /* FacebookSDK.framework in Frameworks */,
 				81A6CA611A2EA82800297C39 /* libstdc++.6.dylib in Frameworks */,
 				DD952FCB16E7F5CF00470144 /* CoreLocation.framework in Frameworks */,
+				C357F7851A7F833D00586007 /* SDWebImage.framework in Frameworks */,
 				4998650515BF305000803E05 /* StoreKit.framework in Frameworks */,
 				743D7B6D157DA60100084B67 /* CoreGraphics.framework in Frameworks */,
 				81A6CA5D1A2EA09D00297C39 /* ParseCrashReporting.framework in Frameworks */,
@@ -142,6 +145,7 @@
 		09ABC07013A1D52D009C3FCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C357F7841A7F833D00586007 /* SDWebImage.framework */,
 				632BAC8D1A7EBA0F00597B8E /* FacebookSDK.framework */,
 				91D261781A36EB67005D713D /* libsqlite3.0.dylib */,
 				81DDFD1719B4A60300BE649C /* Parse.framework */,

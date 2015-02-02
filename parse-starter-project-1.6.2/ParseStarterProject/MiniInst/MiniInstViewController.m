@@ -1,16 +1,16 @@
 //
-//  ParseStarterProjectViewController.m
+//  MiniInstViewController.m
 //
 //  Copyright 2011-present Parse Inc. All rights reserved.
 //
 
-#import "ParseStarterProjectViewController.h"
+#import "MiniInstViewController.h"
 
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "UserDetailsViewController.h"
 
-@implementation ParseStarterProjectViewController
+@implementation MiniInstViewController
 
 #pragma mark -
 #pragma mark UIViewController

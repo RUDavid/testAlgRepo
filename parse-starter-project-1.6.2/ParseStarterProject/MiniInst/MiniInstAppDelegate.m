@@ -1,5 +1,5 @@
 //
-//  ParseStarterProjectAppDelegate.m
+//  MiniInstAppDelegate.m
 //
 //  Copyright 2011-present Parse Inc. All rights reserved.
 //
@@ -16,10 +16,10 @@
 // If you want to use Crash Reporting - uncomment this line
 // #import <ParseCrashReporting/ParseCrashReporting.h>
 
-#import "ParseStarterProjectAppDelegate.h"
-#import "ParseStarterProjectViewController.h"
+#import "MiniInstAppDelegate.h"
+#import "MiniInstViewController.h"
 
-@implementation ParseStarterProjectAppDelegate
+@implementation MiniInstAppDelegate
 
 #pragma mark -
 #pragma mark UIApplicationDelegate
@@ -42,7 +42,7 @@
      [PFFacebookUtils initializeFacebook];
     // ****************************************************************************
 
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[ParseStarterProjectViewController alloc] init]];
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[MiniInstViewController alloc] init]];
 //    [self.window makeKeyAndVisible];
     
     [PFUser enableAutomaticUser];
@@ -104,9 +104,9 @@
 
     [PFPush subscribeToChannelInBackground:@"" block:^(BOOL succeeded, NSError *error) {
         if (succeeded) {
-            NSLog(@"ParseStarterProject successfully subscribed to push notifications on the broadcast channel.");
+            NSLog(@"MiniInst successfully subscribed to push notifications on the broadcast channel.");
         } else {
-            NSLog(@"ParseStarterProject failed to subscribe to push notifications on the broadcast channel.");
+            NSLog(@"MiniInst failed to subscribe to push notifications on the broadcast channel.");
         }
     }];
 }

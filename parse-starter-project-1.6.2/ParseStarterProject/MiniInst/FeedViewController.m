@@ -153,7 +153,7 @@
 
 
 - (NSUInteger)indexForObjectAtIndexPath:(NSIndexPath *)indexPath {
-    return indexPath.row / 2;
+    return indexPath.row;
 }
 
 @end

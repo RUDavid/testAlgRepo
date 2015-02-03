@@ -41,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;// + (self.paginationEnabled ? 1 : 0);/* * 2 + (self.paginationEnabled ? 1 : 0);*/
+    return self.objects.count;
 }
 
 /*
@@ -112,18 +112,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object {
     static NSString *CellIdentifier = @"Cell";
-    
-    NSUInteger index = [self indexForObjectAtIndexPath:indexPath];
-    
-    
+
     // Photo
     PAPPhotoCell *cell = (PAPPhotoCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if (cell == nil) {
         cell = [[PAPPhotoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    
-    cell.imageView.image = [UIImage imageNamed:@"PlaceholderPhoto.png"];
     
     if (object) {
         cell.imageView.file = [object objectForKey:kPAPPhotoPictureKey];

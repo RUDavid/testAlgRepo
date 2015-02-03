@@ -21,14 +21,12 @@
         self.selectionStyle = UITableViewCellSelectionStyleNone;
         self.accessoryType = UITableViewCellAccessoryNone;
         self.clipsToBounds = NO;
-        
         self.backgroundColor = [UIColor clearColor];
         
         self.imageView.frame = CGRectMake( 0.0f, 0.0f, 100, 100);
         self.imageView.backgroundColor = [UIColor blackColor];
         self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-        
-       // [self.contentView bringSubviewToFront:self.imageView];
+        [self.contentView bringSubviewToFront:self.imageView];
     }
 
     return self;
@@ -40,7 +38,6 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.imageView.frame = CGRectMake( 0.0f, 0.0f, 100, 100);
-    //self.photoButton.frame = CGRectMake( 0.0f, 0.0f, self.bounds.size.width, self.bounds.size.width);
 }
 
 @end

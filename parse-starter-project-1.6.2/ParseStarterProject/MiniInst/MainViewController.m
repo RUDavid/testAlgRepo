@@ -13,8 +13,6 @@
 #import "FeedViewController.h"
 #import "Constats.h"
 
-
-
 @interface MainViewController ()
 
 @end
@@ -65,7 +63,10 @@
 {
     [self dismissModalViewControllerAnimated:YES];
     UIImage *image = [info objectForKey:UIImagePickerControllerOriginalImage]; // Image to be stored
-    NSData *imageData = UIImageJPEGRepresentation(image, 0.1); //UIImagePNGRepresentation(image);
+    
+    NSData *imageData =  UIImageJPEGRepresentation(image, 0.1); //UIImagePNGRepresentation(image);
+    //UIImageJPEGRepresentation(thumbnailImage, 0.1);
+    
      PFFile *photoFile = [PFFile fileWithData:imageData];
     
     // Create a Photo object

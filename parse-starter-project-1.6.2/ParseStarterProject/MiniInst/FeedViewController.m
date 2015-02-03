@@ -34,8 +34,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -43,7 +41,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count * 2 + (self.paginationEnabled ? 1 : 0);
+    return self.objects.count;// + (self.paginationEnabled ? 1 : 0);/* * 2 + (self.paginationEnabled ? 1 : 0);*/
 }
 
 
@@ -171,31 +169,28 @@
     
     NSUInteger index = [self indexForObjectAtIndexPath:indexPath];
     
-    if (false /*indexPath.row % 2 == 0*/) {
-        // Header
-        //return [self detailPhotoCellForRowAtIndexPath:indexPath];
-    } else {
-        // Photo
-        PAPPhotoCell *cell = (PAPPhotoCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        if (cell == nil) {
-            cell = [[PAPPhotoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-            //[cell.photoButton addTarget:self action:@selector(didTapOnPhotoAction:) forControlEvents:UIControlEventTouchUpInside];
-        }
-        
-        cell.imageView.image = [UIImage imageNamed:@"PlaceholderPhoto.png"];
-        
-        if (object) {
-            cell.imageView.file = [object objectForKey:kPAPPhotoPictureKey];
-            
-            // PFQTVC will take care of asynchronously downloading files, but will only load them when the tableview is not moving. If the data is there, let's load it right away.
-            if ([cell.imageView.file isDataAvailable]) {
-                [cell.imageView loadInBackground];
-            }
-        }
-        
-        return cell;
+    
+    // Photo
+    PAPPhotoCell *cell = (PAPPhotoCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil) {
+        cell = [[PAPPhotoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
+    
+    //cell.imageView.image = [UIImage imageNamed:@"PlaceholderPhoto.png"];
+    
+    if (object) {
+        cell.imageView.file = [object objectForKey:kPAPPhotoPictureKey];
+        //cell.imageView;
+        
+        // PFQTVC will take care of asynchronously downloading files, but will only load them when the tableview is not moving. If the data is there, let's load it right away.
+        if ([cell.imageView.file isDataAvailable]) {
+            [cell.imageView loadInBackground];
+        }
+    }
+    
+    return cell;
+    
 }
 
 //- (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {

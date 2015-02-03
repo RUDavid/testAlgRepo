@@ -44,49 +44,6 @@
     return self.objects.count;// + (self.paginationEnabled ? 1 : 0);/* * 2 + (self.paginationEnabled ? 1 : 0);*/
 }
 
-
-
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    //TODO: impelemt
-//    UITableViewCell * cell ;
-//    return cell;
-//}
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 /*
 #pragma mark - Table view delegate
 
@@ -119,17 +76,6 @@
     [userPhotosQuery orderByDescending:@"createdAt"];
 
     
-    
-
-    
-//    // If no objects are loaded in memory, we look to the cache first to fill the table
-//    // and then subsequently do a query against the network.
-//    //
-//    // If there is no network connection, we will hit the cache first.
-//    if (self.objects.count == 0 || ![[UIApplication sharedApplication].delegate performSelector:@selector(isParseReachable)]) {
-//        [query setCachePolicy:kPFCachePolicyCacheThenNetwork];
-//    }
-//    
     /*
      This query will result in an error if the schema hasn't been set beforehand. While Parse usually handles this automatically, this is not the case for a compound query such as this one. The error thrown is:
      
@@ -177,7 +123,7 @@
         cell = [[PAPPhotoCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
-    //cell.imageView.image = [UIImage imageNamed:@"PlaceholderPhoto.png"];
+    cell.imageView.image = [UIImage imageNamed:@"PlaceholderPhoto.png"];
     
     if (object) {
         cell.imageView.file = [object objectForKey:kPAPPhotoPictureKey];
@@ -193,19 +139,6 @@
     
 }
 
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForNextPageAtIndexPath:(NSIndexPath *)indexPath {
-//    static NSString *LoadMoreCellIdentifier = @"LoadMoreCell";
-//    PAPLoadMoreCell *cell = [tableView dequeueReusableCellWithIdentifier:LoadMoreCellIdentifier];
-//    if (!cell) {
-//        cell = [[PAPLoadMoreCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:LoadMoreCellIdentifier];
-//        cell.selectionStyle =UITableViewCellSelectionStyleNone;
-//        cell.hideSeparatorBottom = YES;
-//        cell.mainView.backgroundColor = [UIColor clearColor];
-//    }
-//    return cell;
-//}
-
-
 /*
 #pragma mark - Navigation
 
@@ -218,100 +151,6 @@
 
 #pragma mark - ()
 
-- (UITableViewCell *)detailPhotoCellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"DetailPhotoCell";
-    
-    if (self.paginationEnabled && indexPath.row == self.objects.count * 2) {
-        // Load More section
-        return nil;
-    }
-    
-    NSUInteger index = [self indexForObjectAtIndexPath:indexPath];
-    
-//    PAPPhotoHeaderView *headerView = [self.tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    if (!headerView) {
-//        headerView = [[PAPPhotoHeaderView alloc] initWithFrame:CGRectMake( 0.0f, 0.0f, self.view.bounds.size.width, 44.0f) buttons:PAPPhotoHeaderButtonsDefault];
-//        headerView.delegate = self;
-//        headerView.selectionStyle = UITableViewCellSelectionStyleNone;
-//    }
-//    PFObject *object = [self objectAtIndexPath:indexPath];
-//    headerView.photo = object;
-//    headerView.tag = index;
-//    [headerView.likeButton setTag:index];
-    
-//    NSDictionary *attributesForPhoto = [[PAPCache sharedCache] attributesForPhoto:object];
-//    
-//    if (attributesForPhoto) {
-//        [headerView setLikeStatus:[[PAPCache sharedCache] isPhotoLikedByCurrentUser:object]];
-//        [headerView.likeButton setTitle:[[[PAPCache sharedCache] likeCountForPhoto:object] description] forState:UIControlStateNormal];
-//        [headerView.commentButton setTitle:[[[PAPCache sharedCache] commentCountForPhoto:object] description] forState:UIControlStateNormal];
-//        
-//        if (headerView.likeButton.alpha < 1.0f || headerView.commentButton.alpha < 1.0f) {
-//            [UIView animateWithDuration:0.200f animations:^{
-//                headerView.likeButton.alpha = 1.0f;
-//                headerView.commentButton.alpha = 1.0f;
-//            }];
-//        }
-//    } else {
-//        headerView.likeButton.alpha = 0.0f;
-//        headerView.commentButton.alpha = 0.0f;
-//        
-//        @synchronized(self) {
-//            // check if we can update the cache
-//            NSNumber *outstandingSectionHeaderQueryStatus = [self.outstandingSectionHeaderQueries objectForKey:@(index)];
-//            if (!outstandingSectionHeaderQueryStatus) {
-//                PFQuery *query = [PAPUtility queryForActivitiesOnPhoto:object cachePolicy:kPFCachePolicyNetworkOnly];
-//                [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-//                    @synchronized(self) {
-//                        [self.outstandingSectionHeaderQueries removeObjectForKey:@(index)];
-//                        
-//                        if (error) {
-//                            return;
-//                        }
-//                        
-//                        NSMutableArray *likers = [NSMutableArray array];
-//                        NSMutableArray *commenters = [NSMutableArray array];
-//                        
-//                        BOOL isLikedByCurrentUser = NO;
-//                        
-//                        for (PFObject *activity in objects) {
-//                            if ([[activity objectForKey:kPAPActivityTypeKey] isEqualToString:kPAPActivityTypeLike] && [activity objectForKey:kPAPActivityFromUserKey]) {
-//                                [likers addObject:[activity objectForKey:kPAPActivityFromUserKey]];
-//                            } else if ([[activity objectForKey:kPAPActivityTypeKey] isEqualToString:kPAPActivityTypeComment] && [activity objectForKey:kPAPActivityFromUserKey]) {
-//                                [commenters addObject:[activity objectForKey:kPAPActivityFromUserKey]];
-//                            }
-//                            
-//                            if ([[[activity objectForKey:kPAPActivityFromUserKey] objectId] isEqualToString:[[PFUser currentUser] objectId]]) {
-//                                if ([[activity objectForKey:kPAPActivityTypeKey] isEqualToString:kPAPActivityTypeLike]) {
-//                                    isLikedByCurrentUser = YES;
-//                                }
-//                            }
-//                        }
-//                        
-//                        [[PAPCache sharedCache] setAttributesForPhoto:object likers:likers commenters:commenters likedByCurrentUser:isLikedByCurrentUser];
-//                        
-//                        if (headerView.tag != index) {
-//                            return;
-//                        }
-//                        
-//                        [headerView setLikeStatus:[[PAPCache sharedCache] isPhotoLikedByCurrentUser:object]];
-//                        [headerView.likeButton setTitle:[[[PAPCache sharedCache] likeCountForPhoto:object] description] forState:UIControlStateNormal];
-//                        [headerView.commentButton setTitle:[[[PAPCache sharedCache] commentCountForPhoto:object] description] forState:UIControlStateNormal];
-//                        
-//                        if (headerView.likeButton.alpha < 1.0f || headerView.commentButton.alpha < 1.0f) {
-//                            [UIView animateWithDuration:0.200f animations:^{
-//                                headerView.likeButton.alpha = 1.0f;
-//                                headerView.commentButton.alpha = 1.0f;
-//                            }];
-//                        }
-//                    }
-//                }];
-//            }
-//        }
-//    }
-//    
-//    return headerView;
-}
 
 - (NSUInteger)indexForObjectAtIndexPath:(NSIndexPath *)indexPath {
     return indexPath.row / 2;

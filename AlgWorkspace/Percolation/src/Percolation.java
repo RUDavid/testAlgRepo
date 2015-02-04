@@ -112,7 +112,6 @@ public class Percolation {
             // 3. Take the value from the end of the array and move it into the position you've just used. 
             gridPositions[randPos] = gridPositions[closedPositions];
 
-
             p.open(i, j);
             openedSites++;
 

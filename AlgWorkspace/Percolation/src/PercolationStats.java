@@ -24,12 +24,7 @@ public class PercolationStats {
 
             while (!p.percolates())
             {      
-                if (0 == closedPositions)
-                {
-                    break; 
-                    //TODO: throw exception 
-                }
-
+  
                 // 1  Generate a random value from 0 to sizeof the array -1 and use the value at that index position.
                 int randPos = StdRandom.uniform(closedPositions);
                 int i = 1 + gridPositions[randPos] % N;

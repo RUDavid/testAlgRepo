@@ -1,13 +1,11 @@
 
 public class PercolationStats {
     private double []results;
-    private int N;
     private int T;
 
     public PercolationStats(int N, int T)     // perform T independent experiments on an N-by-N grid
     {
         if ( N <= 0 || T <= 0) throw new IllegalArgumentException("Wrong argument");
-        this.N = N;
         this.T = T;
         results = new double[T];
         for (int count = 0; count < T; count++)
@@ -90,13 +88,9 @@ public class PercolationStats {
         int T = Integer.parseInt(args[1]);
 
         PercolationStats ps = new PercolationStats(N, T);
-        double mean = ps.mean();
-        double stdDev = ps.stddev();
-        double hi = ps.confidenceHi();
-        double lo = ps.confidenceLo();
-        StdOut.printf("mean                        =%1f ", mean);
-        StdOut.printf("stddev                      =%1f ", stdDev);
-        StdOut.printf("95percent confidence interval     =%1f, %1f", hi,lo);
+        StdOut.printf("mean                        =%1f ", ps.mean());
+        StdOut.printf("stddev                      =%1f ", ps.stddev());
+        StdOut.printf("95percent confidence interval     =%1f, %1f", ps.confidenceHi(), ps.confidenceLo());
         
     }
 }

@@ -12,7 +12,7 @@ public class PercolationStats {
         {
             Percolation p = new Percolation(N);
             //////Start
-            int openedSites = 0;	     
+            double openedSites = 0;	     
             int [] gridPositions = new int[N*N];
             int closedPositions = N*N;
 
@@ -41,13 +41,13 @@ public class PercolationStats {
                 //StdOut.printf("rE: attemted# %1d  %1d %1d was opened %b percolates %b closedPositions %1d openedSites %1d\n", 
                 //count,i, j, p.isOpen(i, j), p.percolates(), closedPositions, openedSites);
             }
-            //store resutls
+            //store results
             results[count]  = openedSites / N;
 
 
         }
     }
-    public double mean()                      // sample mean of percolation threshold
+    public double mean()                      // samples mean of percolation threshold
     {
         double val = 0;
         for (int count = 0; count < T; ++count)

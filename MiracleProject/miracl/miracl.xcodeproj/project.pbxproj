@@ -1,0 +1,621 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63BA18751AA6259F006EC1F8 /* libmiracl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 63BA18691AA6259F006EC1F8 /* libmiracl.a */; };
+		63BA18851AA62668006EC1F8 /* mrcore.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18841AA62668006EC1F8 /* mrcore.c */; };
+		63BA18891AA62694006EC1F8 /* mrarth0.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18861AA62694006EC1F8 /* mrarth0.c */; };
+		63BA188A1AA62694006EC1F8 /* mrarth1.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18871AA62694006EC1F8 /* mrarth1.c */; };
+		63BA188B1AA62694006EC1F8 /* mrarth2.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18881AA62694006EC1F8 /* mrarth2.c */; };
+		63BA188D1AA626A7006EC1F8 /* mralloc.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA188C1AA626A7006EC1F8 /* mralloc.c */; };
+		63BA188F1AA626C1006EC1F8 /* mrsmall.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA188E1AA626C1006EC1F8 /* mrsmall.c */; };
+		63BA18921AA626FC006EC1F8 /* mrio1.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18901AA626FC006EC1F8 /* mrio1.c */; };
+		63BA18931AA626FC006EC1F8 /* mrio2.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18911AA626FC006EC1F8 /* mrio2.c */; };
+		63BA18951AA6273A006EC1F8 /* mrgcd.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18941AA6273A006EC1F8 /* mrgcd.c */; };
+		63BA18971AA62923006EC1F8 /* mrjack.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18961AA62923006EC1F8 /* mrjack.c */; };
+		63BA18991AA62938006EC1F8 /* mrxgcd.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18981AA62938006EC1F8 /* mrxgcd.c */; };
+		63BA189B1AA62954006EC1F8 /* mrarth3.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA189A1AA62954006EC1F8 /* mrarth3.c */; };
+		63BA189D1AA6295E006EC1F8 /* mrbits.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA189C1AA6295E006EC1F8 /* mrbits.c */; };
+		63BA189F1AA6296E006EC1F8 /* mrrand.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA189E1AA6296E006EC1F8 /* mrrand.c */; };
+		63BA18A11AA62979006EC1F8 /* mrprime.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18A01AA62979006EC1F8 /* mrprime.c */; };
+		63BA18A31AA62985006EC1F8 /* mrcrt.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18A21AA62985006EC1F8 /* mrcrt.c */; };
+		63BA18A51AA62994006EC1F8 /* mrscrt.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18A41AA62994006EC1F8 /* mrscrt.c */; };
+		63BA18A71AA629B2006EC1F8 /* mrmonty.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18A61AA629B2006EC1F8 /* mrmonty.c */; };
+		63BA18A91AA629F3006EC1F8 /* mrbits.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18A81AA629F3006EC1F8 /* mrbits.c */; };
+		63BA18AB1AA62A54006EC1F8 /* mrrand.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18AA1AA62A54006EC1F8 /* mrrand.c */; };
+		63BA18AD1AA62A8A006EC1F8 /* mrprime.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18AC1AA62A8A006EC1F8 /* mrprime.c */; };
+		63BA18AF1AA62A9A006EC1F8 /* mrcrt.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18AE1AA62A9A006EC1F8 /* mrcrt.c */; };
+		63BA18B11AA62AC5006EC1F8 /* mrscrt.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18B01AA62AC5006EC1F8 /* mrscrt.c */; };
+		63BA18B31AA62ADE006EC1F8 /* mrmonty.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18B21AA62ADE006EC1F8 /* mrmonty.c */; };
+		63BA18B51AA62B1B006EC1F8 /* mrpower.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18B41AA62B1B006EC1F8 /* mrpower.c */; };
+		63BA18B71AA62B49006EC1F8 /* mrsroot.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18B61AA62B49006EC1F8 /* mrsroot.c */; };
+		63BA18B91AA62B5C006EC1F8 /* mrcurve.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18B81AA62B5C006EC1F8 /* mrcurve.c */; };
+		63BA18BB1AA62B62006EC1F8 /* mrfast.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18BA1AA62B62006EC1F8 /* mrfast.c */; };
+		63BA18BD1AA62B6E006EC1F8 /* mrshs.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18BC1AA62B6E006EC1F8 /* mrshs.c */; };
+		63BA18BF1AA62B72006EC1F8 /* mrshs256.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18BE1AA62B72006EC1F8 /* mrshs256.c */; };
+		63BA18C11AA62B76006EC1F8 /* mrshs512.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18C01AA62B76006EC1F8 /* mrshs512.c */; };
+		63BA18C31AA62B80006EC1F8 /* mrsha3.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18C21AA62B80006EC1F8 /* mrsha3.c */; };
+		63BA18C51AA62B8D006EC1F8 /* mrfpe.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18C41AA62B8D006EC1F8 /* mrfpe.c */; };
+		63BA18C71AA62B98006EC1F8 /* mraes.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18C61AA62B98006EC1F8 /* mraes.c */; };
+		63BA18CB1AA62BDF006EC1F8 /* mraes.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18CA1AA62BDF006EC1F8 /* mraes.c */; };
+		63BA18CD1AA62BEC006EC1F8 /* mraes.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18CC1AA62BEC006EC1F8 /* mraes.c */; };
+		63BA18CF1AA62C9B006EC1F8 /* mrgcm.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18CE1AA62C9B006EC1F8 /* mrgcm.c */; };
+		63BA18D11AA62CC0006EC1F8 /* mrlucas.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18D01AA62CC0006EC1F8 /* mrlucas.c */; };
+		63BA18D51AA62CE8006EC1F8 /* mrzzn2.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18D21AA62CE8006EC1F8 /* mrzzn2.c */; };
+		63BA18D61AA62CE8006EC1F8 /* mrzzn2b.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18D31AA62CE8006EC1F8 /* mrzzn2b.c */; };
+		63BA18D71AA62CE8006EC1F8 /* mrzzn3.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18D41AA62CE8006EC1F8 /* mrzzn3.c */; };
+		63BA18D91AA62CFD006EC1F8 /* mrecn2.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18D81AA62CFD006EC1F8 /* mrecn2.c */; };
+		63BA18DB1AA62D1A006EC1F8 /* mrstrong.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18DA1AA62D1A006EC1F8 /* mrstrong.c */; };
+		63BA18DD1AA62D2B006EC1F8 /* mrbrick.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18DC1AA62D2B006EC1F8 /* mrbrick.c */; };
+		63BA18DF1AA62D3F006EC1F8 /* mrebrick.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18DE1AA62D3F006EC1F8 /* mrebrick.c */; };
+		63BA18E11AA62D65006EC1F8 /* mrec2m.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18E01AA62D65006EC1F8 /* mrec2m.c */; };
+		63BA18E31AA62D74006EC1F8 /* mrgf2m.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18E21AA62D74006EC1F8 /* mrgf2m.c */; };
+		63BA18E51AA62D7F006EC1F8 /* mrflash.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18E41AA62D7F006EC1F8 /* mrflash.c */; };
+		63BA18E71AA62D89006EC1F8 /* mrfrnd.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18E61AA62D89006EC1F8 /* mrfrnd.c */; };
+		63BA18E91AA62D95006EC1F8 /* mrdouble.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18E81AA62D95006EC1F8 /* mrdouble.c */; };
+		63BA18EB1AA62DA3006EC1F8 /* mrround.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18EA1AA62DA3006EC1F8 /* mrround.c */; };
+		63BA18ED1AA62DAF006EC1F8 /* mrbuild.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18EC1AA62DAF006EC1F8 /* mrbuild.c */; };
+		63BA18EF1AA62DB9006EC1F8 /* mrflsh1.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18EE1AA62DB9006EC1F8 /* mrflsh1.c */; };
+		63BA18F31AA62DC7006EC1F8 /* mrflsh2.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18F01AA62DC7006EC1F8 /* mrflsh2.c */; };
+		63BA18F41AA62DC7006EC1F8 /* mrflsh3.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18F11AA62DC7006EC1F8 /* mrflsh3.c */; };
+		63BA18F51AA62DC7006EC1F8 /* mrflsh4.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18F21AA62DC7006EC1F8 /* mrflsh4.c */; };
+		63BA18F71AA62DDF006EC1F8 /* mrpi.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18F61AA62DDF006EC1F8 /* mrpi.c */; };
+		63BA18F91AA62DF7006EC1F8 /* mrmuldv.c in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18F81AA62DF7006EC1F8 /* mrmuldv.c */; };
+		63BA18FB1AA62E04006EC1F8 /* big.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18FA1AA62E04006EC1F8 /* big.cpp */; };
+		63BA18FD1AA62E0F006EC1F8 /* zzn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18FC1AA62E0F006EC1F8 /* zzn.cpp */; };
+		63BA18FF1AA62E1F006EC1F8 /* ecn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63BA18FE1AA62E1F006EC1F8 /* ecn.cpp */; };
+		63BA19011AA62E26006EC1F8 /* ecn2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63BA19001AA62E26006EC1F8 /* ecn2.cpp */; };
+		63BA19031AA62E36006EC1F8 /* flash.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63BA19021AA62E36006EC1F8 /* flash.cpp */; };
+		63BA19051AA62E4B006EC1F8 /* crt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 63BA19041AA62E4B006EC1F8 /* crt.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		63BA18761AA6259F006EC1F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 63BA18611AA6259E006EC1F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 63BA18681AA6259E006EC1F8;
+			remoteInfo = miracl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		63BA18671AA6259E006EC1F8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		63BA18691AA6259F006EC1F8 /* libmiracl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmiracl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BA18741AA6259F006EC1F8 /* miraclTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = miraclTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		63BA187A1AA6259F006EC1F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63BA18841AA62668006EC1F8 /* mrcore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrcore.c; path = ../../../proxyreencryptionlib/miraclSources/mrcore.c; sourceTree = "<group>"; };
+		63BA18861AA62694006EC1F8 /* mrarth0.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrarth0.c; path = ../../../proxyreencryptionlib/miraclSources/mrarth0.c; sourceTree = "<group>"; };
+		63BA18871AA62694006EC1F8 /* mrarth1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrarth1.c; path = ../../../proxyreencryptionlib/miraclSources/mrarth1.c; sourceTree = "<group>"; };
+		63BA18881AA62694006EC1F8 /* mrarth2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrarth2.c; path = ../../../proxyreencryptionlib/miraclSources/mrarth2.c; sourceTree = "<group>"; };
+		63BA188C1AA626A7006EC1F8 /* mralloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mralloc.c; path = ../../../proxyreencryptionlib/miraclSources/mralloc.c; sourceTree = "<group>"; };
+		63BA188E1AA626C1006EC1F8 /* mrsmall.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrsmall.c; path = ../../../proxyreencryptionlib/miraclSources/mrsmall.c; sourceTree = "<group>"; };
+		63BA18901AA626FC006EC1F8 /* mrio1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrio1.c; path = ../../../proxyreencryptionlib/miraclSources/mrio1.c; sourceTree = "<group>"; };
+		63BA18911AA626FC006EC1F8 /* mrio2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrio2.c; path = ../../../proxyreencryptionlib/miraclSources/mrio2.c; sourceTree = "<group>"; };
+		63BA18941AA6273A006EC1F8 /* mrgcd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrgcd.c; path = ../../../proxyreencryptionlib/miraclSources/mrgcd.c; sourceTree = "<group>"; };
+		63BA18961AA62923006EC1F8 /* mrjack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrjack.c; path = ../../../proxyreencryptionlib/miraclSources/mrjack.c; sourceTree = "<group>"; };
+		63BA18981AA62938006EC1F8 /* mrxgcd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrxgcd.c; path = ../../../proxyreencryptionlib/miraclSources/mrxgcd.c; sourceTree = "<group>"; };
+		63BA189A1AA62954006EC1F8 /* mrarth3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrarth3.c; path = ../../../proxyreencryptionlib/miraclSources/mrarth3.c; sourceTree = "<group>"; };
+		63BA189C1AA6295E006EC1F8 /* mrbits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrbits.c; path = ../../../proxyreencryptionlib/miraclSources/mrbits.c; sourceTree = "<group>"; };
+		63BA189E1AA6296E006EC1F8 /* mrrand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrrand.c; path = ../../../proxyreencryptionlib/miraclSources/mrrand.c; sourceTree = "<group>"; };
+		63BA18A01AA62979006EC1F8 /* mrprime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrprime.c; path = ../../../proxyreencryptionlib/miraclSources/mrprime.c; sourceTree = "<group>"; };
+		63BA18A21AA62985006EC1F8 /* mrcrt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrcrt.c; path = ../../../proxyreencryptionlib/miraclSources/mrcrt.c; sourceTree = "<group>"; };
+		63BA18A41AA62994006EC1F8 /* mrscrt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrscrt.c; path = ../../../proxyreencryptionlib/miraclSources/mrscrt.c; sourceTree = "<group>"; };
+		63BA18A61AA629B2006EC1F8 /* mrmonty.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrmonty.c; path = ../../../proxyreencryptionlib/miraclSources/mrmonty.c; sourceTree = "<group>"; };
+		63BA18A81AA629F3006EC1F8 /* mrbits.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrbits.c; path = ../../../proxyreencryptionlib/miraclSources/mrbits.c; sourceTree = "<group>"; };
+		63BA18AA1AA62A54006EC1F8 /* mrrand.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrrand.c; path = ../../../proxyreencryptionlib/miraclSources/mrrand.c; sourceTree = "<group>"; };
+		63BA18AC1AA62A8A006EC1F8 /* mrprime.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrprime.c; path = ../../../proxyreencryptionlib/miraclSources/mrprime.c; sourceTree = "<group>"; };
+		63BA18AE1AA62A9A006EC1F8 /* mrcrt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrcrt.c; path = ../../../proxyreencryptionlib/miraclSources/mrcrt.c; sourceTree = "<group>"; };
+		63BA18B01AA62AC5006EC1F8 /* mrscrt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrscrt.c; path = ../../../proxyreencryptionlib/miraclSources/mrscrt.c; sourceTree = "<group>"; };
+		63BA18B21AA62ADE006EC1F8 /* mrmonty.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrmonty.c; path = ../../../proxyreencryptionlib/miraclSources/mrmonty.c; sourceTree = "<group>"; };
+		63BA18B41AA62B1B006EC1F8 /* mrpower.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrpower.c; path = ../../../proxyreencryptionlib/miraclSources/mrpower.c; sourceTree = "<group>"; };
+		63BA18B61AA62B49006EC1F8 /* mrsroot.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrsroot.c; path = ../../../proxyreencryptionlib/miraclSources/mrsroot.c; sourceTree = "<group>"; };
+		63BA18B81AA62B5C006EC1F8 /* mrcurve.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrcurve.c; path = ../../../proxyreencryptionlib/miraclSources/mrcurve.c; sourceTree = "<group>"; };
+		63BA18BA1AA62B62006EC1F8 /* mrfast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrfast.c; path = ../../../proxyreencryptionlib/miraclSources/mrfast.c; sourceTree = "<group>"; };
+		63BA18BC1AA62B6E006EC1F8 /* mrshs.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrshs.c; path = ../../../proxyreencryptionlib/miraclSources/mrshs.c; sourceTree = "<group>"; };
+		63BA18BE1AA62B72006EC1F8 /* mrshs256.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrshs256.c; path = ../../../proxyreencryptionlib/miraclSources/mrshs256.c; sourceTree = "<group>"; };
+		63BA18C01AA62B76006EC1F8 /* mrshs512.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrshs512.c; path = ../../../proxyreencryptionlib/miraclSources/mrshs512.c; sourceTree = "<group>"; };
+		63BA18C21AA62B80006EC1F8 /* mrsha3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrsha3.c; path = ../../../proxyreencryptionlib/miraclSources/mrsha3.c; sourceTree = "<group>"; };
+		63BA18C41AA62B8D006EC1F8 /* mrfpe.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrfpe.c; path = ../../../proxyreencryptionlib/miraclSources/mrfpe.c; sourceTree = "<group>"; };
+		63BA18C61AA62B98006EC1F8 /* mraes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mraes.c; path = ../../../proxyreencryptionlib/miraclSources/mraes.c; sourceTree = "<group>"; };
+		63BA18CA1AA62BDF006EC1F8 /* mraes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mraes.c; path = ../../../proxyreencryptionlib/miraclSources/mraes.c; sourceTree = "<group>"; };
+		63BA18CC1AA62BEC006EC1F8 /* mraes.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mraes.c; path = ../../../proxyreencryptionlib/miraclSources/mraes.c; sourceTree = "<group>"; };
+		63BA18CE1AA62C9B006EC1F8 /* mrgcm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrgcm.c; path = ../../../proxyreencryptionlib/miraclSources/mrgcm.c; sourceTree = "<group>"; };
+		63BA18D01AA62CC0006EC1F8 /* mrlucas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrlucas.c; path = ../../../proxyreencryptionlib/miraclSources/mrlucas.c; sourceTree = "<group>"; };
+		63BA18D21AA62CE8006EC1F8 /* mrzzn2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrzzn2.c; path = ../../../proxyreencryptionlib/miraclSources/mrzzn2.c; sourceTree = "<group>"; };
+		63BA18D31AA62CE8006EC1F8 /* mrzzn2b.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrzzn2b.c; path = ../../../proxyreencryptionlib/miraclSources/mrzzn2b.c; sourceTree = "<group>"; };
+		63BA18D41AA62CE8006EC1F8 /* mrzzn3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrzzn3.c; path = ../../../proxyreencryptionlib/miraclSources/mrzzn3.c; sourceTree = "<group>"; };
+		63BA18D81AA62CFD006EC1F8 /* mrecn2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrecn2.c; path = ../../../proxyreencryptionlib/miraclSources/mrecn2.c; sourceTree = "<group>"; };
+		63BA18DA1AA62D1A006EC1F8 /* mrstrong.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrstrong.c; path = ../../../proxyreencryptionlib/miraclSources/mrstrong.c; sourceTree = "<group>"; };
+		63BA18DC1AA62D2B006EC1F8 /* mrbrick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrbrick.c; path = ../../../proxyreencryptionlib/miraclSources/mrbrick.c; sourceTree = "<group>"; };
+		63BA18DE1AA62D3F006EC1F8 /* mrebrick.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrebrick.c; path = ../../../proxyreencryptionlib/miraclSources/mrebrick.c; sourceTree = "<group>"; };
+		63BA18E01AA62D65006EC1F8 /* mrec2m.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrec2m.c; path = ../../../proxyreencryptionlib/miraclSources/mrec2m.c; sourceTree = "<group>"; };
+		63BA18E21AA62D74006EC1F8 /* mrgf2m.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrgf2m.c; path = ../../../proxyreencryptionlib/miraclSources/mrgf2m.c; sourceTree = "<group>"; };
+		63BA18E41AA62D7F006EC1F8 /* mrflash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrflash.c; path = ../../../proxyreencryptionlib/miraclSources/mrflash.c; sourceTree = "<group>"; };
+		63BA18E61AA62D89006EC1F8 /* mrfrnd.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrfrnd.c; path = ../../../proxyreencryptionlib/miraclSources/mrfrnd.c; sourceTree = "<group>"; };
+		63BA18E81AA62D95006EC1F8 /* mrdouble.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrdouble.c; path = ../../../proxyreencryptionlib/miraclSources/mrdouble.c; sourceTree = "<group>"; };
+		63BA18EA1AA62DA3006EC1F8 /* mrround.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrround.c; path = ../../../proxyreencryptionlib/miraclSources/mrround.c; sourceTree = "<group>"; };
+		63BA18EC1AA62DAF006EC1F8 /* mrbuild.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrbuild.c; path = ../../../proxyreencryptionlib/miraclSources/mrbuild.c; sourceTree = "<group>"; };
+		63BA18EE1AA62DB9006EC1F8 /* mrflsh1.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrflsh1.c; path = ../../../proxyreencryptionlib/miraclSources/mrflsh1.c; sourceTree = "<group>"; };
+		63BA18F01AA62DC7006EC1F8 /* mrflsh2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrflsh2.c; path = ../../../proxyreencryptionlib/miraclSources/mrflsh2.c; sourceTree = "<group>"; };
+		63BA18F11AA62DC7006EC1F8 /* mrflsh3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrflsh3.c; path = ../../../proxyreencryptionlib/miraclSources/mrflsh3.c; sourceTree = "<group>"; };
+		63BA18F21AA62DC7006EC1F8 /* mrflsh4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrflsh4.c; path = ../../../proxyreencryptionlib/miraclSources/mrflsh4.c; sourceTree = "<group>"; };
+		63BA18F61AA62DDF006EC1F8 /* mrpi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrpi.c; path = ../../../proxyreencryptionlib/miraclSources/mrpi.c; sourceTree = "<group>"; };
+		63BA18F81AA62DF7006EC1F8 /* mrmuldv.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mrmuldv.c; path = ../../../proxyreencryptionlib/miraclSources/mrmuldv.c; sourceTree = "<group>"; };
+		63BA18FA1AA62E04006EC1F8 /* big.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; name = big.cpp; path = ../../../proxyreencryptionlib/miraclSources/big.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		63BA18FC1AA62E0F006EC1F8 /* zzn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = zzn.cpp; path = ../../../proxyreencryptionlib/miraclSources/zzn.cpp; sourceTree = "<group>"; };
+		63BA18FE1AA62E1F006EC1F8 /* ecn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ecn.cpp; path = ../../../proxyreencryptionlib/miraclSources/ecn.cpp; sourceTree = "<group>"; };
+		63BA19001AA62E26006EC1F8 /* ecn2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ecn2.cpp; path = ../../../proxyreencryptionlib/miraclSources/ecn2.cpp; sourceTree = "<group>"; };
+		63BA19021AA62E36006EC1F8 /* flash.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; lineEnding = 0; name = flash.cpp; path = ../../../proxyreencryptionlib/miraclSources/flash.cpp; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
+		63BA19041AA62E4B006EC1F8 /* crt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = crt.cpp; path = ../../../proxyreencryptionlib/miraclSources/crt.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63BA18661AA6259E006EC1F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BA18711AA6259F006EC1F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BA18751AA6259F006EC1F8 /* libmiracl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63BA18601AA6259E006EC1F8 = {
+			isa = PBXGroup;
+			children = (
+				63BA18831AA62658006EC1F8 /* src */,
+				63BA18781AA6259F006EC1F8 /* miraclTests */,
+				63BA186A1AA6259F006EC1F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63BA186A1AA6259F006EC1F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63BA18691AA6259F006EC1F8 /* libmiracl.a */,
+				63BA18741AA6259F006EC1F8 /* miraclTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63BA18781AA6259F006EC1F8 /* miraclTests */ = {
+			isa = PBXGroup;
+			children = (
+				63BA18791AA6259F006EC1F8 /* Supporting Files */,
+			);
+			path = miraclTests;
+			sourceTree = "<group>";
+		};
+		63BA18791AA6259F006EC1F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				63BA187A1AA6259F006EC1F8 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		63BA18831AA62658006EC1F8 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				63BA18841AA62668006EC1F8 /* mrcore.c */,
+				63BA18941AA6273A006EC1F8 /* mrgcd.c */,
+				63BA18A61AA629B2006EC1F8 /* mrmonty.c */,
+				63BA18A81AA629F3006EC1F8 /* mrbits.c */,
+				63BA18B81AA62B5C006EC1F8 /* mrcurve.c */,
+				63BA18CA1AA62BDF006EC1F8 /* mraes.c */,
+				63BA18961AA62923006EC1F8 /* mrjack.c */,
+				63BA18E41AA62D7F006EC1F8 /* mrflash.c */,
+				63BA18C41AA62B8D006EC1F8 /* mrfpe.c */,
+				63BA18C61AA62B98006EC1F8 /* mraes.c */,
+				63BA19041AA62E4B006EC1F8 /* crt.cpp */,
+				63BA18BA1AA62B62006EC1F8 /* mrfast.c */,
+				63BA18E81AA62D95006EC1F8 /* mrdouble.c */,
+				63BA18F61AA62DDF006EC1F8 /* mrpi.c */,
+				63BA19021AA62E36006EC1F8 /* flash.cpp */,
+				63BA18EE1AA62DB9006EC1F8 /* mrflsh1.c */,
+				63BA18DC1AA62D2B006EC1F8 /* mrbrick.c */,
+				63BA19001AA62E26006EC1F8 /* ecn2.cpp */,
+				63BA18F01AA62DC7006EC1F8 /* mrflsh2.c */,
+				63BA18F81AA62DF7006EC1F8 /* mrmuldv.c */,
+				63BA18FE1AA62E1F006EC1F8 /* ecn.cpp */,
+				63BA18F11AA62DC7006EC1F8 /* mrflsh3.c */,
+				63BA18FC1AA62E0F006EC1F8 /* zzn.cpp */,
+				63BA18F21AA62DC7006EC1F8 /* mrflsh4.c */,
+				63BA18FA1AA62E04006EC1F8 /* big.cpp */,
+				63BA18DE1AA62D3F006EC1F8 /* mrebrick.c */,
+				63BA18E61AA62D89006EC1F8 /* mrfrnd.c */,
+				63BA18EC1AA62DAF006EC1F8 /* mrbuild.c */,
+				63BA18CE1AA62C9B006EC1F8 /* mrgcm.c */,
+				63BA18BC1AA62B6E006EC1F8 /* mrshs.c */,
+				63BA18EA1AA62DA3006EC1F8 /* mrround.c */,
+				63BA18CC1AA62BEC006EC1F8 /* mraes.c */,
+				63BA18E21AA62D74006EC1F8 /* mrgf2m.c */,
+				63BA18B41AA62B1B006EC1F8 /* mrpower.c */,
+				63BA18D81AA62CFD006EC1F8 /* mrecn2.c */,
+				63BA18D01AA62CC0006EC1F8 /* mrlucas.c */,
+				63BA18E01AA62D65006EC1F8 /* mrec2m.c */,
+				63BA18C21AA62B80006EC1F8 /* mrsha3.c */,
+				63BA18C01AA62B76006EC1F8 /* mrshs512.c */,
+				63BA18D21AA62CE8006EC1F8 /* mrzzn2.c */,
+				63BA18DA1AA62D1A006EC1F8 /* mrstrong.c */,
+				63BA18D31AA62CE8006EC1F8 /* mrzzn2b.c */,
+				63BA18D41AA62CE8006EC1F8 /* mrzzn3.c */,
+				63BA189E1AA6296E006EC1F8 /* mrrand.c */,
+				63BA18B21AA62ADE006EC1F8 /* mrmonty.c */,
+				63BA18BE1AA62B72006EC1F8 /* mrshs256.c */,
+				63BA18B61AA62B49006EC1F8 /* mrsroot.c */,
+				63BA18AA1AA62A54006EC1F8 /* mrrand.c */,
+				63BA18AC1AA62A8A006EC1F8 /* mrprime.c */,
+				63BA18B01AA62AC5006EC1F8 /* mrscrt.c */,
+				63BA18AE1AA62A9A006EC1F8 /* mrcrt.c */,
+				63BA189C1AA6295E006EC1F8 /* mrbits.c */,
+				63BA18861AA62694006EC1F8 /* mrarth0.c */,
+				63BA18A21AA62985006EC1F8 /* mrcrt.c */,
+				63BA18A01AA62979006EC1F8 /* mrprime.c */,
+				63BA18A41AA62994006EC1F8 /* mrscrt.c */,
+				63BA18901AA626FC006EC1F8 /* mrio1.c */,
+				63BA18911AA626FC006EC1F8 /* mrio2.c */,
+				63BA188E1AA626C1006EC1F8 /* mrsmall.c */,
+				63BA189A1AA62954006EC1F8 /* mrarth3.c */,
+				63BA188C1AA626A7006EC1F8 /* mralloc.c */,
+				63BA18981AA62938006EC1F8 /* mrxgcd.c */,
+				63BA18871AA62694006EC1F8 /* mrarth1.c */,
+				63BA18881AA62694006EC1F8 /* mrarth2.c */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63BA18681AA6259E006EC1F8 /* miracl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63BA187D1AA6259F006EC1F8 /* Build configuration list for PBXNativeTarget "miracl" */;
+			buildPhases = (
+				63BA18651AA6259E006EC1F8 /* Sources */,
+				63BA18661AA6259E006EC1F8 /* Frameworks */,
+				63BA18671AA6259E006EC1F8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = miracl;
+			productName = miracl;
+			productReference = 63BA18691AA6259F006EC1F8 /* libmiracl.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		63BA18731AA6259F006EC1F8 /* miraclTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63BA18801AA6259F006EC1F8 /* Build configuration list for PBXNativeTarget "miraclTests" */;
+			buildPhases = (
+				63BA18701AA6259F006EC1F8 /* Sources */,
+				63BA18711AA6259F006EC1F8 /* Frameworks */,
+				63BA18721AA6259F006EC1F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				63BA18771AA6259F006EC1F8 /* PBXTargetDependency */,
+			);
+			name = miraclTests;
+			productName = miraclTests;
+			productReference = 63BA18741AA6259F006EC1F8 /* miraclTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63BA18611AA6259E006EC1F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "David Vardanyan";
+				TargetAttributes = {
+					63BA18681AA6259E006EC1F8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					63BA18731AA6259F006EC1F8 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 63BA18641AA6259E006EC1F8 /* Build configuration list for PBXProject "miracl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 63BA18601AA6259E006EC1F8;
+			productRefGroup = 63BA186A1AA6259F006EC1F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63BA18681AA6259E006EC1F8 /* miracl */,
+				63BA18731AA6259F006EC1F8 /* miraclTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63BA18721AA6259F006EC1F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63BA18651AA6259E006EC1F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63BA18F71AA62DDF006EC1F8 /* mrpi.c in Sources */,
+				63BA19051AA62E4B006EC1F8 /* crt.cpp in Sources */,
+				63BA18CD1AA62BEC006EC1F8 /* mraes.c in Sources */,
+				63BA18CB1AA62BDF006EC1F8 /* mraes.c in Sources */,
+				63BA18F31AA62DC7006EC1F8 /* mrflsh2.c in Sources */,
+				63BA18FB1AA62E04006EC1F8 /* big.cpp in Sources */,
+				63BA18AF1AA62A9A006EC1F8 /* mrcrt.c in Sources */,
+				63BA18D11AA62CC0006EC1F8 /* mrlucas.c in Sources */,
+				63BA18A31AA62985006EC1F8 /* mrcrt.c in Sources */,
+				63BA18EF1AA62DB9006EC1F8 /* mrflsh1.c in Sources */,
+				63BA18B91AA62B5C006EC1F8 /* mrcurve.c in Sources */,
+				63BA189D1AA6295E006EC1F8 /* mrbits.c in Sources */,
+				63BA18A71AA629B2006EC1F8 /* mrmonty.c in Sources */,
+				63BA18B11AA62AC5006EC1F8 /* mrscrt.c in Sources */,
+				63BA18E71AA62D89006EC1F8 /* mrfrnd.c in Sources */,
+				63BA18E31AA62D74006EC1F8 /* mrgf2m.c in Sources */,
+				63BA18D71AA62CE8006EC1F8 /* mrzzn3.c in Sources */,
+				63BA18A51AA62994006EC1F8 /* mrscrt.c in Sources */,
+				63BA18C31AA62B80006EC1F8 /* mrsha3.c in Sources */,
+				63BA18FD1AA62E0F006EC1F8 /* zzn.cpp in Sources */,
+				63BA18F91AA62DF7006EC1F8 /* mrmuldv.c in Sources */,
+				63BA18BF1AA62B72006EC1F8 /* mrshs256.c in Sources */,
+				63BA18F41AA62DC7006EC1F8 /* mrflsh3.c in Sources */,
+				63BA188D1AA626A7006EC1F8 /* mralloc.c in Sources */,
+				63BA18D91AA62CFD006EC1F8 /* mrecn2.c in Sources */,
+				63BA18EB1AA62DA3006EC1F8 /* mrround.c in Sources */,
+				63BA18AB1AA62A54006EC1F8 /* mrrand.c in Sources */,
+				63BA18DD1AA62D2B006EC1F8 /* mrbrick.c in Sources */,
+				63BA18B31AA62ADE006EC1F8 /* mrmonty.c in Sources */,
+				63BA18FF1AA62E1F006EC1F8 /* ecn.cpp in Sources */,
+				63BA18ED1AA62DAF006EC1F8 /* mrbuild.c in Sources */,
+				63BA18DB1AA62D1A006EC1F8 /* mrstrong.c in Sources */,
+				63BA18D61AA62CE8006EC1F8 /* mrzzn2b.c in Sources */,
+				63BA18C71AA62B98006EC1F8 /* mraes.c in Sources */,
+				63BA18A11AA62979006EC1F8 /* mrprime.c in Sources */,
+				63BA18E51AA62D7F006EC1F8 /* mrflash.c in Sources */,
+				63BA18931AA626FC006EC1F8 /* mrio2.c in Sources */,
+				63BA18E11AA62D65006EC1F8 /* mrec2m.c in Sources */,
+				63BA18DF1AA62D3F006EC1F8 /* mrebrick.c in Sources */,
+				63BA18891AA62694006EC1F8 /* mrarth0.c in Sources */,
+				63BA19031AA62E36006EC1F8 /* flash.cpp in Sources */,
+				63BA188F1AA626C1006EC1F8 /* mrsmall.c in Sources */,
+				63BA18B51AA62B1B006EC1F8 /* mrpower.c in Sources */,
+				63BA18851AA62668006EC1F8 /* mrcore.c in Sources */,
+				63BA18971AA62923006EC1F8 /* mrjack.c in Sources */,
+				63BA188B1AA62694006EC1F8 /* mrarth2.c in Sources */,
+				63BA18951AA6273A006EC1F8 /* mrgcd.c in Sources */,
+				63BA18C51AA62B8D006EC1F8 /* mrfpe.c in Sources */,
+				63BA18B71AA62B49006EC1F8 /* mrsroot.c in Sources */,
+				63BA18F51AA62DC7006EC1F8 /* mrflsh4.c in Sources */,
+				63BA18A91AA629F3006EC1F8 /* mrbits.c in Sources */,
+				63BA19011AA62E26006EC1F8 /* ecn2.cpp in Sources */,
+				63BA18BD1AA62B6E006EC1F8 /* mrshs.c in Sources */,
+				63BA18991AA62938006EC1F8 /* mrxgcd.c in Sources */,
+				63BA18CF1AA62C9B006EC1F8 /* mrgcm.c in Sources */,
+				63BA18921AA626FC006EC1F8 /* mrio1.c in Sources */,
+				63BA18D51AA62CE8006EC1F8 /* mrzzn2.c in Sources */,
+				63BA18E91AA62D95006EC1F8 /* mrdouble.c in Sources */,
+				63BA188A1AA62694006EC1F8 /* mrarth1.c in Sources */,
+				63BA18C11AA62B76006EC1F8 /* mrshs512.c in Sources */,
+				63BA189B1AA62954006EC1F8 /* mrarth3.c in Sources */,
+				63BA189F1AA6296E006EC1F8 /* mrrand.c in Sources */,
+				63BA18BB1AA62B62006EC1F8 /* mrfast.c in Sources */,
+				63BA18AD1AA62A8A006EC1F8 /* mrprime.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63BA18701AA6259F006EC1F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		63BA18771AA6259F006EC1F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 63BA18681AA6259E006EC1F8 /* miracl */;
+			targetProxy = 63BA18761AA6259F006EC1F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		63BA187B1AA6259F006EC1F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		63BA187C1AA6259F006EC1F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63BA187E1AA6259F006EC1F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = MR_FP;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		63BA187F1AA6259F006EC1F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = MR_FP;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		63BA18811AA6259F006EC1F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = miraclTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		63BA18821AA6259F006EC1F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = miraclTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63BA18641AA6259E006EC1F8 /* Build configuration list for PBXProject "miracl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BA187B1AA6259F006EC1F8 /* Debug */,
+				63BA187C1AA6259F006EC1F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63BA187D1AA6259F006EC1F8 /* Build configuration list for PBXNativeTarget "miracl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BA187E1AA6259F006EC1F8 /* Debug */,
+				63BA187F1AA6259F006EC1F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		63BA18801AA6259F006EC1F8 /* Build configuration list for PBXNativeTarget "miraclTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BA18811AA6259F006EC1F8 /* Debug */,
+				63BA18821AA6259F006EC1F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63BA18611AA6259E006EC1F8 /* Project object */;
+}
